@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #fdfbf1;
+  --color-border: #bababa;
+  --color-cta: #1d82ff;
+  --color-blue-section: #d4e7ff;
+  --color-yellow-section: #fff8dc;
+  --color-green-section: #e1f5e0;
+  --color-purple-section: #e8d4ff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  background-color: #fdfbf1;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
