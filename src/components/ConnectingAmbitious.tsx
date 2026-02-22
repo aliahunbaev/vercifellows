@@ -27,13 +27,24 @@ export default function ConnectingAmbitious() {
       className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-10 md:gap-16"
       style={{
         padding: '120px 0',
-        borderBottom: '1px solid rgba(0,0,0,0.1)',
+        position: 'relative',
       }}
     >
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: '100vw',
+          height: '1px',
+          backgroundColor: 'rgba(0,0,0,0.1)',
+        }}
+      />
       {/* Left - Sticky title */}
       <div>
         <h2
-          className="text-dark md:sticky md:top-[100px]"
+          className="text-dark text-textured md:sticky md:top-[100px]"
           style={{
             fontSize: 'clamp(28px, 4vw, 40px)',
             fontWeight: 500,

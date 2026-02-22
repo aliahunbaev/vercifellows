@@ -44,14 +44,38 @@ export default function Manifesto() {
       style={{
         margin: '80px 0',
         padding: '100px 0',
-        borderTop: '1px solid rgba(0,0,0,0.1)',
-        borderBottom: '1px solid rgba(0,0,0,0.1)',
         minHeight: '80vh',
+        position: 'relative',
       }}
     >
+      {/* Full-bleed top border */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: '100vw',
+          height: '1px',
+          backgroundColor: 'rgba(0,0,0,0.1)',
+        }}
+      />
+      {/* Full-bleed bottom border */}
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: '100vw',
+          height: '1px',
+          backgroundColor: 'rgba(0,0,0,0.1)',
+        }}
+      />
       <div>
         {/* Word-by-word reveal */}
         <div
+          className="text-textured"
           style={{
             fontSize: 'clamp(28px, 4vw, 40px)',
             fontWeight: 500,

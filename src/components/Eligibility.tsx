@@ -23,7 +23,7 @@ const requirements = [
   },
 ]
 
-export default function Eligibility() {
+export default function Eligibility({ isDark }: { isDark: boolean }) {
   const [checked, setChecked] = useState<boolean[]>(new Array(requirements.length).fill(false))
 
   const toggle = (i: number) => {
@@ -42,17 +42,19 @@ export default function Eligibility() {
       className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-10 md:gap-16"
       style={{
         padding: '120px 0',
-        borderBottom: '1px solid rgba(0,0,0,0.1)',
+        position: 'relative',
       }}
     >
       {/* Left - Sticky title */}
       <div>
         <h2
-          className="text-dark md:sticky md:top-[100px]"
+          className="text-textured md:sticky md:top-[100px]"
           style={{
             fontSize: 'clamp(28px, 4vw, 40px)',
             fontWeight: 500,
             lineHeight: 1.2,
+            color: isDark ? '#fdfbf1' : '#1a1a1a',
+            transition: 'color 0.3s ease',
           }}
         >
           &bull; ELIGIBILITY
@@ -76,24 +78,25 @@ export default function Eligibility() {
               }}
               aria-label={`Requirement: ${req.text}`}
             >
-              {/* Checkbox — black border, black checkmark that fills the box */}
+              {/* Checkbox — adapts to dark mode */}
               <div
                 style={{
                   width: '32px',
                   height: '32px',
                   minWidth: '32px',
-                  border: '1.5px solid #1a1a1a',
+                  border: `1.5px solid ${isDark ? '#fdfbf1' : '#1a1a1a'}`,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   marginTop: '2px',
+                  transition: 'border-color 0.3s ease',
                 }}
               >
                 {checked[i] && (
                   <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                     <path
                       d="M4 14L11 21L24 6"
-                      stroke="#1a1a1a"
+                      stroke={isDark ? '#fdfbf1' : '#1a1a1a'}
                       strokeWidth="2.5"
                       strokeLinecap="square"
                       strokeLinejoin="miter"
@@ -110,8 +113,9 @@ export default function Eligibility() {
                   fontWeight: 500,
                   letterSpacing: '0.02em',
                   maxWidth: '500px',
+                  color: isDark ? '#fdfbf1' : '#1a1a1a',
                   opacity: checked[i] ? 0.3 : 1,
-                  transition: 'opacity 0.15s ease',
+                  transition: 'opacity 0.15s ease, color 0.3s ease',
                 }}
               >
                 {req.text}
@@ -129,8 +133,9 @@ export default function Eligibility() {
             fontStyle: 'italic',
             fontSize: 'clamp(24px, 3vw, 32px)',
             fontWeight: 400,
-            color: '#1a1a1a',
+            color: isDark ? '#fdfbf1' : '#1a1a1a',
             marginTop: '56px',
+            transition: 'color 0.3s ease',
             opacity: allChecked ? 1 : 0,
             pointerEvents: allChecked ? 'auto' : 'none',
           }}

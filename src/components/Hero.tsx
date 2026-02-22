@@ -60,112 +60,113 @@ export default function Hero() {
   const suffix = useTypingEffect()
 
   return (
-    <section style={{ paddingTop: '100px', paddingBottom: '60px' }}>
-      {/* Wordmark SVG */}
-      <div style={{ marginBottom: '24px' }}>
-        <img
-          src="/wordmark.svg"
-          alt="V Fellowship"
-          style={{
-            width: '100%',
-            maxWidth: '500px',
-            height: 'auto',
-          }}
-        />
-      </div>
-
-      {/* Typing headline */}
-      <h1
-        className="text-dark"
+    <section
+      className="hero-section dark-section"
+      style={{
+        backgroundColor: '#1a1a1a',
+        color: '#fdfbf1',
+        width: '100vw',
+        position: 'relative',
+        left: '50%',
+        transform: 'translateX(-50%)',
+      }}
+    >
+      <div
+        className="max-w-[1400px] mx-auto px-6 md:px-10"
         style={{
-          fontSize: 'clamp(40px, 6vw, 72px)',
-          fontWeight: 400,
-          lineHeight: 1.1,
-          letterSpacing: '-0.02em',
-          marginBottom: '48px',
+          paddingTop: '120px',
+          paddingBottom: '160px',
         }}
       >
-        For students building{' '}
-        <span style={{ position: 'relative', display: 'inline-block', verticalAlign: 'bottom' }}>
-          {/* Invisible longest word to reserve width/height */}
-          <span style={{ visibility: 'hidden' }}>{longestSuffix}</span>
-          {/* Visible typed text overlaid on top */}
-          <span style={{ position: 'absolute', left: 0, top: 0, whiteSpace: 'nowrap' }}>
-            {suffix}
-            <span
-              style={{
-                display: 'inline-block',
-                width: '3px',
-                height: '0.75em',
-                backgroundColor: '#1a1a1a',
-                marginLeft: '2px',
-                verticalAlign: 'baseline',
-                position: 'relative',
-                top: '0.05em',
-                animation: 'cursorBlink 1.2s ease-in-out infinite',
-              }}
-            />
-          </span>
-        </span>
-      </h1>
-
-      {/* Subtext + Apply CTA row */}
-      <div
-        className="flex flex-col md:flex-row md:items-stretch gap-6 md:gap-0"
-      >
-        {/* Left — descriptor (60%) */}
-        <div
-          className="md:basis-[60%]"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-          }}
-        >
-          <p
-            className="uppercase"
+        {/* Wordmark SVG */}
+        <div style={{ marginBottom: '32px' }}>
+          <img
+            src="/wordmark.svg"
+            alt="V Fellowship"
             style={{
-              fontSize: 'clamp(16px, 1.8vw, 22px)',
-              fontWeight: 400,
-              lineHeight: 1.4,
-              letterSpacing: '.04em',
-              color: 'rgba(26,26,26,0.3)',
-              margin: 0,
-              textAlign: 'right',
-              paddingRight: 'clamp(20px, 3vw, 48px)',
+              width: '100%',
+              maxWidth: '460px',
+              height: 'auto',
+              filter: 'invert(1)',
             }}
-          >
-            The Verci Fellowship connects ambitious college students with mentors, funding, and a community of makers.
-          </p>
+          />
         </div>
 
-        {/* Right — Apply CTA (40%) */}
-        <a
-          href="#apply"
-          className="hero-cta md:basis-[40%]"
+        {/* SVG filter for text edge texture */}
+        <svg style={{ position: 'absolute', width: 0, height: 0 }} aria-hidden="true">
+          <defs>
+            <filter id="textTexture">
+              <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+          </defs>
+        </svg>
+
+        {/* Typing headline */}
+        <h1
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: 'clamp(36px, 5vw, 64px)',
-            fontWeight: 400,
+            fontSize: 'clamp(40px, 6vw, 72px)',
+            fontWeight: 300,
             lineHeight: 1.1,
             letterSpacing: '-0.02em',
-            color: '#1a1a1a',
-            textDecoration: 'none',
-            border: '1px solid #1a1a1a',
-            padding: '0.3em 0.4em',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = '#1a1a1a'
-            e.currentTarget.style.color = '#fdfbf1'
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = 'transparent'
-            e.currentTarget.style.color = '#1a1a1a'
+            marginBottom: '48px',
+            color: '#fdfbf1',
+            filter: 'url(#textTexture)',
           }}
         >
-          Apply now
-        </a>
+          For students building{' '}
+          <span style={{ position: 'relative', display: 'inline-block', verticalAlign: 'bottom' }}>
+            <span style={{ visibility: 'hidden' }}>{longestSuffix}</span>
+            <span style={{ position: 'absolute', left: 0, top: 0, whiteSpace: 'nowrap' }}>
+              {suffix}
+              <span
+                style={{
+                  display: 'inline-block',
+                  width: '3px',
+                  height: '0.75em',
+                  backgroundColor: '#fdfbf1',
+                  marginLeft: '2px',
+                  verticalAlign: 'baseline',
+                  position: 'relative',
+                  top: '0.05em',
+                  animation: 'cursorBlink 1.2s ease-in-out infinite',
+                }}
+              />
+            </span>
+          </span>
+        </h1>
+
+        {/* Apply CTA — right-aligned, fixed size */}
+        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <a
+            href="#apply"
+            className="hero-cta"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '360px',
+              height: '100px',
+              fontSize: '36px',
+              fontWeight: 400,
+              lineHeight: 1,
+              letterSpacing: '-0.02em',
+              color: '#fdfbf1',
+              textDecoration: 'none',
+              border: '1px solid #fdfbf1',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#fdfbf1'
+              e.currentTarget.style.color = '#1a1a1a'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = 'transparent'
+              e.currentTarget.style.color = '#fdfbf1'
+            }}
+          >
+            Apply now
+          </a>
+        </div>
       </div>
 
       <style>{`
@@ -175,8 +176,17 @@ export default function Hero() {
         }
         @media (max-width: 767px) {
           .hero-cta {
-            width: 100%;
+            width: 100% !important;
           }
+        }
+        .hero-section::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          opacity: 0.04;
+          pointer-events: none;
+          background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+          background-size: 128px 128px;
         }
       `}</style>
     </section>
