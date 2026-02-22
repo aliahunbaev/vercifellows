@@ -43,7 +43,7 @@ export default function PhotoStrip() {
     e.currentTarget.style.transform = `translate(${newX}px, ${newY}px) rotate(${rotate}deg)`
   }, [])
 
-  const onPointerUp = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
+  const onPointerUp = useCallback((_: React.PointerEvent<HTMLDivElement>) => {
     if (!dragState.current) return
     const el = dragState.current.el
     if (el) {
