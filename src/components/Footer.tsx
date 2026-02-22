@@ -1,38 +1,97 @@
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: '#1f1f1f', borderTop: '1px solid rgba(255, 255, 255, 0.1)', padding: '60px 0', color: '#fff' }} className="md:py-20">
-      <div className="max-w-[1000px] mx-auto px-6 md:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-0">
-          {/* Left: branding + contact */}
-          <div>
-            <div className="flex items-baseline gap-0 mb-6">
-              <span className="font-bold text-lg md:text-[22px]" style={{ letterSpacing: '-0.06em', fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', color: '#fff' }}>
-                VERCI
-              </span>
-            </div>
-            <p className="text-base md:text-[18px] mb-6 md:mb-8" style={{ lineHeight: '1.6', color: '#fff' }}>
-              <a href="mailto:fellows@verci.com" className="transition-opacity hover:opacity-60" style={{ color: '#fff' }}>
-                fellows@verci.com
-              </a>
-            </p>
-            <p className="text-sm md:text-base" style={{ opacity: 0.5, color: '#fff' }}>
-              &copy; {new Date().getFullYear()} Verci. All rights reserved.
-            </p>
+    <footer
+      style={{
+        backgroundColor: '#1a1a1a',
+        color: '#fdfbf1',
+        padding: '80px 0 40px',
+      }}
+    >
+      <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        {/* Wordmark */}
+        <div style={{ marginBottom: '60px' }}>
+          <img
+            src="/wordmark.svg"
+            alt="V Fellowship"
+            style={{
+              width: '100%',
+              maxWidth: '400px',
+              height: 'auto',
+              opacity: 0.12,
+              filter: 'invert(1)',
+            }}
+          />
+        </div>
+
+        {/* Main row */}
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-10"
+          style={{
+            fontSize: '12px',
+            fontWeight: 500,
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+          }}
+        >
+          {/* Contact */}
+          <div className="flex flex-col gap-3">
+            <span style={{ opacity: 0.35, marginBottom: '4px' }}>CONTACT</span>
+            <a
+              href="mailto:fellows@verci.com"
+              style={{
+                color: '#fdfbf1',
+                textDecoration: 'none',
+                transition: 'opacity 0.2s ease',
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.4' }}
+              onMouseLeave={(e) => { e.currentTarget.style.opacity = '1' }}
+            >
+              FELLOWS@VERCI.COM
+            </a>
           </div>
 
-          {/* Right: social links */}
-          <div className="flex gap-6 md:gap-8">
-            <a href="#" className="transition-opacity hover:opacity-60 text-sm md:text-base" style={{ color: '#fff' }}>
-              Twitter
-            </a>
-            <a href="#" className="transition-opacity hover:opacity-60 text-sm md:text-base" style={{ color: '#fff' }}>
-              LinkedIn
-            </a>
-            <a href="#" className="transition-opacity hover:opacity-60 text-sm md:text-base" style={{ color: '#fff' }}>
-              Instagram
-            </a>
+          {/* Social */}
+          <div className="flex flex-col gap-3">
+            <span style={{ opacity: 0.35, marginBottom: '4px' }}>FOLLOW</span>
+            {['TWITTER', 'LINKEDIN', 'INSTAGRAM'].map((social) => (
+              <a
+                key={social}
+                href="#"
+                style={{
+                  color: '#fdfbf1',
+                  textDecoration: 'none',
+                  transition: 'opacity 0.2s ease',
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.4' }}
+                onMouseLeave={(e) => { e.currentTarget.style.opacity = '1' }}
+              >
+                {social}
+              </a>
+            ))}
+          </div>
+
+          {/* Info */}
+          <div className="flex flex-col gap-3">
+            <span style={{ opacity: 0.35, marginBottom: '4px' }}>PROGRAM</span>
+            <span>COHORT 1</span>
+            <span>MARCH – SEPTEMBER 2026</span>
+            <span>NEW YORK CITY</span>
           </div>
         </div>
+
+        {/* Bottom */}
+        <p
+          style={{
+            fontSize: '11px',
+            fontWeight: 500,
+            letterSpacing: '0.06em',
+            textTransform: 'uppercase',
+            color: 'rgba(253,251,241,0.25)',
+            marginTop: '60px',
+          }}
+        >
+          &copy; 2026 VERCI. ALL RIGHTS RESERVED.
+        </p>
       </div>
     </footer>
   )
