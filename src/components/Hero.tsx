@@ -87,7 +87,6 @@ export default function Hero() {
               width: '100%',
               maxWidth: '460px',
               height: 'auto',
-              filter: 'invert(1)',
             }}
           />
         </div>
