@@ -17,6 +17,7 @@ export default function Footer() {
             display: 'block',
             width: '100%',
             height: 'auto',
+            opacity: 0.12,
             filter: 'invert(1)',
           }}
         />
