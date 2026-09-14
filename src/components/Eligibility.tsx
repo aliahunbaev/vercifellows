@@ -10,7 +10,7 @@ const requirements = [
     rotate: 1.5,
   },
   {
-    text: 'CURRENT COLLEGE FRESHMAN, SOPHOMORE, OR JUNIOR WITH US WORK AUTHORIZATION.',
+    text: 'CURRENTLY IN COLLEGE, ON LEAVE, DROPPED OUT, OR RECENTLY GRADUATED. ROUGHLY UNDER 24.',
     rotate: -1,
   },
   {

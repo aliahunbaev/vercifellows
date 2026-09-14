@@ -78,7 +78,7 @@ export default function Apply({ isDark }: { isDark: boolean }) {
                 marginBottom: '36px',
               }}
             >
-              Cohort 1 &nbsp;&bull;&nbsp; March – September 2026
+              Cohort 1 &nbsp;&bull;&nbsp; October – December 2026
             </p>
 
             {/* Intro paragraphs */}
@@ -90,7 +90,7 @@ export default function Apply({ isDark }: { isDark: boolean }) {
                 color: 'rgba(26,26,26,0.8)',
               }}
             >
-              We're looking for 20 students building things on campus or in their communities.
+              We're looking for 20 people building things on campus or in their communities.
             </p>
             <p
               style={{
@@ -128,10 +128,13 @@ export default function Apply({ isDark }: { isDark: boolean }) {
                 margin: 0,
               }}
             >
-              <li style={{ marginBottom: '4px' }}>What you're building and why</li>
-              <li style={{ marginBottom: '4px' }}>Why you want to join</li>
+              <li style={{ marginBottom: '4px' }}>Name and where you are</li>
+              <li style={{ marginBottom: '4px' }}>LinkedIn, Twitter, Instagram</li>
+              <li style={{ marginBottom: '4px' }}>What your semester looks like</li>
+              <li style={{ marginBottom: '4px' }}>The most interesting thing you've done</li>
+              <li style={{ marginBottom: '4px' }}>A dream you want to hit in the next ten years</li>
               <li style={{ marginBottom: '4px' }}>Link to your work</li>
-              <li style={{ marginBottom: '4px' }}>Name, email, school</li>
+              <li style={{ marginBottom: '4px' }}>One open-ended piece — a video, an event proposal, a post, or a site introducing yourself</li>
             </ul>
 
             {/* Apply button */}

@@ -2,24 +2,24 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 
 const phases = [
   {
-    month: 'MARCH – APRIL',
-    title: 'ONBOARDING',
-    desc: "Virtual workshops, mentor matching, breakout groups. You'll meet the cohort and start building together online.",
+    month: 'OCTOBER',
+    title: 'KICKOFF',
+    desc: "Mentor matching, mastermind groups form, and everyone sets the goal they're chasing this semester.",
   },
   {
-    month: 'MAY – JUNE',
-    title: 'NYC TRIP + CATSKILLS RETREAT',
-    desc: "Spend a weekend meeting everyone, visiting startups, and going deep on what you're working on.",
+    month: 'NOVEMBER',
+    title: 'CATSKILLS RETREAT',
+    desc: "A weekend in one house. Deep work, real conversations, and the people you'll be building alongside.",
   },
   {
-    month: 'JULY – AUGUST',
+    month: 'NOVEMBER – DECEMBER',
     title: 'BUILDING',
-    desc: 'Keep building with support from your mentor. Host events at your school with your budget. Ship milestones.',
+    desc: "Weekly masterminds, office hours, and events in your own community. Ship what you said you'd ship.",
   },
   {
-    month: 'SEPTEMBER',
-    title: 'SHOWCASE AT VERCI',
-    desc: 'Present what you built to investors, operators, and the community. Celebrate what you made.',
+    month: '2027',
+    title: 'JOINT SHOWCASE',
+    desc: 'Both cohorts, one night in New York. Present what you built to investors, operators, and the community.',
   },
 ]
 
@@ -105,7 +105,7 @@ export default function TimelineSection() {
             lineHeight: 1.2,
           }}
         >
-          &bull; 6 MONTHS, STRUCTURED
+          &bull; ONE SEMESTER, STRUCTURED
         </h2>
       </div>
 

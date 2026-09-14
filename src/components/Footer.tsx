@@ -77,8 +77,8 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             <span style={{ opacity: 0.35, marginBottom: '4px' }}>PROGRAM</span>
             <span>COHORT 1</span>
-            <span>MARCH – SEPTEMBER 2026</span>
-            <span>NEW YORK CITY</span>
+            <span>OCTOBER – DECEMBER 2026</span>
+            <span>NEW YORK CITY + LA</span>
           </div>
         </div>
 
