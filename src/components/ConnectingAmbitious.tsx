@@ -64,7 +64,7 @@ export default function ConnectingAmbitious() {
             marginBottom: '20px',
           }}
         >
-          We bring together 20 students building startups, projects, and communities.
+          We bring together 20 people building startups, projects, and communities.
         </p>
         <p
           style={{
@@ -73,7 +73,7 @@ export default function ConnectingAmbitious() {
             marginBottom: '20px',
           }}
         >
-          You get matched with mentors in your field, attend monthly workshops with founders and investors, and join a tight-knit group of other builders—online and in New York.
+          You get matched with a mentor in your field, meet weekly with a small mastermind group, and sit in on office hours with people building the things you want to build — online, in New York, and in LA.
         </p>
         <p
           style={{
@@ -96,7 +96,7 @@ export default function ConnectingAmbitious() {
             textTransform: 'uppercase',
           }}
         >
-          20 Fellows &nbsp;|&nbsp; 6 Months &nbsp;|&nbsp; March – September 2026
+          20 Fellows &nbsp;|&nbsp; One Semester &nbsp;|&nbsp; October – December 2026
         </p>
 
         {/* Founder vector illustration — horizontal, fades in on scroll */}
