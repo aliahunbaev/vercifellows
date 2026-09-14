@@ -17,7 +17,7 @@ const phases = [
     desc: "Weekly masterminds, office hours, and events in your own community. Ship what you said you'd ship.",
   },
   {
-    month: '2027',
+    month: 'MAY – JUNE 2027',
     title: 'JOINT SHOWCASE',
     desc: 'Both cohorts, one night in New York. Present what you built to investors, operators, and the community.',
   },

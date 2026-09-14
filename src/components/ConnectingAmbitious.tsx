@@ -64,7 +64,7 @@ export default function ConnectingAmbitious() {
             marginBottom: '20px',
           }}
         >
-          We bring together 20 students building startups, projects, and communities.
+          We bring together 20 people building startups, projects, and communities.
         </p>
         <p
           style={{
