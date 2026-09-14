@@ -1,3 +1,5 @@
+import { APPLICATION_URL } from '../config'
+
 export default function Apply({ isDark }: { isDark: boolean }) {
   return (
     <section
@@ -140,7 +142,9 @@ export default function Apply({ isDark }: { isDark: boolean }) {
             {/* Apply button */}
             <div style={{ marginTop: '44px' }}>
               <a
-                href="#"
+                href={APPLICATION_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   display: 'block',
                   padding: '18px 36px',

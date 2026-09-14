@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { APPLICATION_URL } from '../config'
 
 const suffixes = ['the future', 'community', 'software', 'something new', 'each other', 'what matters', 'together']
 
@@ -138,7 +139,9 @@ export default function Hero() {
         {/* Apply CTA — right-aligned, fixed size */}
         <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
           <a
-            href="#apply"
+            href={APPLICATION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hero-cta"
             style={{
               display: 'flex',
